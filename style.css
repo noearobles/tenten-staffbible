@@ -169,9 +169,9 @@ tete* {
   }
   
   .stats {
+    font-size: large;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 0;
@@ -181,6 +181,8 @@ tete* {
     transition: 0.3s ease-in;
     overflow: auto;
     height: 85%;
+    padding-right: 15%;
+    padding-left: 15%;
     background-color: #333333;
     color: #d6c887;
   }
