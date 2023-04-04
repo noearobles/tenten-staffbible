@@ -75,6 +75,41 @@ let dishArr = [
             ["Blistered Peppers", "Green Yuzukosho", "Ponzu Sauce"],
 
         ],
+        "", ""], ["Chicken Karaage",
+        "karaage.jpeg",
+        15,
+        [
+            ["Fried Chicken Thighs", "Nori Honey", "Togarashi", "Kewpie Mayo"],
+
+        ],
+        "", ""], ["Crispy Baby Octopus",
+        "octopus.jpeg",
+        18,
+        [
+            ["Takoyaki", "Bonito Flakes", "Kewpie Mayo"],
+
+        ],
+        "", ""], ["Gyoza Tacos",
+        "tacos.jpeg",
+        18,
+        [
+            ["A5 or Tuna", "Aji Amarillo"]
+
+        ],
+        "", "Not GF"], ["Mushroom Ceviche",
+        "ceviche.jpeg",
+        14,
+        [
+            ["Aji Amarillo", "Lime", "Cilantro","Avocado","Serano","Japanese Mushrooms (mytahkis bunashimeji)"],
+
+        ],
+        "", ""], ["Brussel Sprouts",
+        "brussels.jpeg",
+        10,
+        [
+            ["Fried Brussels", "Nato Glaze", "Pickled Root Vegetable","Togorashi"],
+
+        ],
         "", ""]]
 
 
