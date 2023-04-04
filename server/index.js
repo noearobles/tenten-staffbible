@@ -6,11 +6,10 @@ function init() {
         loader.style.display = "none";
     }, 4000);
     content.style.display = "none";
-
 }
 init()
 let dishes = [];
-const poke_card = document.getElementById("pokemonBox")
+const poke_card = document.getElementById("dishBox")
 const generateList = (arg) => {
     let items = "";
     for (let i = 0; i < arg.length; i++) {
@@ -18,8 +17,7 @@ const generateList = (arg) => {
     }
     return items
 }
-
-const search = document.querySelector("#pokemonName");
+const search = document.querySelector("#dishName");
 const input = document.getElementById("form");
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -27,12 +25,10 @@ function capitalizeFirstLetter(string) {
 function lowerCaseName(string) {
     return string.toLowerCase();
 }
-
-
 class dish {
-    constructor(name, spriteBack, price, ingredients, type, gluten) {
+    constructor(name, sprite, price, ingredients, type, gluten) {
         this.name = name;
-        this.spriteBack = spriteBack;
+        this.spriteBack = sprite;
         this.price = price;
         this.ingredients = ingredients;
         this.type = type;
@@ -40,105 +36,74 @@ class dish {
     }
 }
 let dishArr = [
-    [
-        "Miso Soup",
-        "misoSoup.jpeg",
+    ["Miso Soup",
+        "dishImages/misoSoup.jpeg",
         6,
-
         ["Tofu", "Wakame", "Scallions"],
-
-
         "Vegan", "Not GF"
-    ], [
-        "Charred Edamame",
-        "charredEdamame.jpeg",
+    ],
+    ["Charred Edamame",
+        "dishImages/charredEdamame.jpeg",
         11,
-
         ["Smoked Edamame", "Chili Honey Furikake", "Togarashi"],
-
-
         "Vegan", "GF"],
-    [
-        "Cucumber Sunomono",
-        "cucumberSunomono.jpeg",
+    ["Cucumber Sunomono",
+        "dishImages/cucumberSunomono.jpeg",
         9,
-
         ["Cucumber", "Daikon Radish", "Sesame", "Shiso", "White Onion Rice Vinegar"],
-
-
-        "Vegan", "GF"
-    ], ["Seasonal Vegetable Tempura",
-        "vegTempura.jpeg",
+        "Vegan", "GF"],
+    ["Seasonal Vegetable Tempura",
+        "dishImages/vegTempura.jpeg",
         14,
-
         ["Ginger Kaeshi", "Tempura Fried Carrots", "Egg Plant", "Mushroom", "Squah", "Onion", "Bell Pepper"],
-
-
-        "", "Not GF"], ["Blistered Shishito Peppers",
-        "shishitoPeppers.jpeg",
+        "", "Not GF"],
+    ["Blistered Shishito Peppers",
+        "dishImages/shishitoPeppers.jpeg",
         8,
-
         ["Blistered Peppers", "Green Yuzukosho", "Ponzu Sauce"],
-
-
-        "", ""], ["Chicken Karaage",
-        "karaage.jpeg",
+        "", ""],
+    ["Chicken Karaage",
+        "dishImages/karaage.jpeg",
         15,
-
         ["Fried Chicken Thighs", "Nori Honey", "Togarashi", "Kewpie Mayo"],
-
-
-        "", ""], ["Crispy Baby Octopus",
-        "octopus.jpeg",
+        "", ""],
+    ["Crispy Baby Octopus",
+        "dishImages/octopus.jpeg",
         18,
-
         ["Takoyaki", "Bonito Flakes", "Kewpie Mayo"],
-
-
-        "", ""], ["Gyoza Tacos",
-        "tacos.jpeg",
+        "", ""],
+    ["Gyoza Tacos",
+        "dishImages/tacos.jpeg",
         18,
-
-        ["A5 or Tuna", "Aji Amarillo"]
-
-        ,
-        "", "Not GF"], ["Mushroom Ceviche",
-        "ceviche.jpeg",
+        ["A5 or Tuna", "Aji Amarillo"],
+        "", "Not GF"],
+    ["Mushroom Ceviche",
+        "dishImages/ceviche.jpeg",
         14,
-
         ["Aji Amarillo", "Lime", "Cilantro", "Avocado", "Serano", "Japanese Mushrooms (mytahkis bunashimeji)"],
-
-
-        "", ""], ["Brussel Sprouts",
-        "brussels.jpeg",
+        "", ""],
+    ["Brussel Sprouts",
+        "dishImages/brussels.jpeg",
         10,
-
         ["Fried Brussels", "Nato Glaze", "Pickled Root Vegetable", "Togorashi"],
 
-
-        "", ""], ["Hamachi Carpaccio",
-        "carpaccio.jpeg",
+        "", ""],
+    ["Hamachi Carpaccio",
+        "dishImages/carpaccio.jpeg",
         27,
-
         ["Yellowtail Sashimi", "Yuzu Truffle Vinegar", "Black Truffle", "Pink Peppercorn"],
-
-
-        "", ""]]
-
-
-
-
-
+        "", ""]
+]
 function getAllDishes() {
     dishArr.forEach((postArr) => {
-        const pMonEl = document.createElement("div");
-        pMonEl.classList.add("pokemon");
+        const dishEl = document.createElement("div");
+        dishEl.classList.add("dish");
         const dishType = postArr[4];
         const gluten = postArr[5];
         const name = postArr[0];
         const price = postArr[2]
         const ingredients = postArr[3];
-        const pokeInnerHTML = `<div class="img-container">
+        const dishInnerHTML = `<div class="img-container">
     <img src="${postArr[1]}" 
     alt = "${name}"/>
     </div>
@@ -155,11 +120,8 @@ function getAllDishes() {
     <ol>
     <small class="stats">Ingredients:<b> ${generateList(ingredients)}<b></small>
     </ol>`;
-        pMonEl.innerHTML = pokeInnerHTML;
-        poke_card.appendChild(pMonEl);
+        dishEl.innerHTML = dishInnerHTML;
+        poke_card.appendChild(dishEl);
     })
 }
-
 getAllDishes()
-
-
