@@ -47,7 +47,7 @@ let dishArr = [
 
         ["Tofu", "Wakame", "Scallions"],
 
-        ,
+
         "Vegan", "Not GF"
     ], [
         "Charred Edamame",
@@ -56,7 +56,7 @@ let dishArr = [
 
         ["Smoked Edamame", "Chili Honey Furikake", "Togarashi"],
 
-        ,
+
         "Vegan", "GF"],
     [
         "Cucumber Sunomono",
@@ -65,7 +65,7 @@ let dishArr = [
 
         ["Cucumber", "Daikon Radish", "Sesame", "Shiso", "White Onion Rice Vinegar"],
 
-        ,
+
         "Vegan", "GF"
     ], ["Seasonal Vegetable Tempura",
         "vegTempura.jpeg",
@@ -73,28 +73,28 @@ let dishArr = [
 
         ["Ginger Kaeshi", "Tempura Fried Carrots", "Egg Plant", "Mushroom", "Squah", "Onion", "Bell Pepper"],
 
-        ,
+
         "", "Not GF"], ["Blistered Shishito Peppers",
         "shishitoPeppers.jpeg",
         8,
 
         ["Blistered Peppers", "Green Yuzukosho", "Ponzu Sauce"],
 
-        ,
+
         "", ""], ["Chicken Karaage",
         "karaage.jpeg",
         15,
 
         ["Fried Chicken Thighs", "Nori Honey", "Togarashi", "Kewpie Mayo"],
 
-        ,
+
         "", ""], ["Crispy Baby Octopus",
         "octopus.jpeg",
         18,
 
         ["Takoyaki", "Bonito Flakes", "Kewpie Mayo"],
 
-        ,
+
         "", ""], ["Gyoza Tacos",
         "tacos.jpeg",
         18,
@@ -108,14 +108,21 @@ let dishArr = [
 
         ["Aji Amarillo", "Lime", "Cilantro", "Avocado", "Serano", "Japanese Mushrooms (mytahkis bunashimeji)"],
 
-        ,
+
         "", ""], ["Brussel Sprouts",
         "brussels.jpeg",
         10,
 
         ["Fried Brussels", "Nato Glaze", "Pickled Root Vegetable", "Togorashi"],
 
-        ,
+
+        "", ""], ["Hamachi Carpaccio",
+        "carpaccio.jpeg",
+        27,
+
+        ["Yellowtail Sashimi", "Yuzu Truffle Vinegar", "Black Truffle", "Pink Peppercorn"],
+
+
         "", ""]]
 
 
