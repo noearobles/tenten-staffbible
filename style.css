@@ -5,7 +5,8 @@ tete* {
 
 html {
   margin: 0;
-  background-color: #ffe6a7;
+  background: url('backgimg.jpg');
+  background-size: cover;
 }
 
 @font-face {
