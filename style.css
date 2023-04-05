@@ -5,8 +5,7 @@ tete* {
 
 html {
   margin: 0;
-  background-image: url('backgimg.jpg');
-  background-size: cover;
+  background-color: #ffe6a7;
 }
 
 @font-face {
@@ -130,10 +129,10 @@ p {
 }
 
 .dish {
-  border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 1);
-  border-top: 3px solid #000;
-  border-bottom: 1px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px #432818;
+  border-top: 3px solid;
+  border-bottom: 1px solid;
   border-color: #432818;
   text-align: center;
   position: relative;
@@ -208,6 +207,7 @@ span::first-letter {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
+
 .dish:hover .stats {
   transform: translateY(0);
 }
