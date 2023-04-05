@@ -98,7 +98,7 @@ nav {
 }
 
 body {
-  background-color: #432818;
+  background-color: #ffe6a7;
   background: url('backgimg.jpg');
   background-size: cover;
   min-height: 100vh;
@@ -203,10 +203,13 @@ span::first-letter {
   justify-content: space-between;
 }
 
-.dish:hover .stats {
-  transform: translateY(0);
-}
 
+@media (hover: hover){
+
+  .dish:hover .stats {
+    transform: translateY(0);
+  }
+}
 
 .flex {
   display: flex;
