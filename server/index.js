@@ -92,6 +92,10 @@ let dishArr = [
         "dishImages/carpaccio.jpeg",
         27,
         ["Yellowtail Sashimi", "Yuzu Truffle Vinegar", "Black Truffle", "Pink Peppercorn"],
+        "", ""], ["Tuna Tatahki",
+        "dishImages/tatahki.jpeg",
+        27,
+        ["Tuna filet seared on robata charcoal", "Avocado Crema", "Ginger Garlic", "Fried Shallots", "Ryu Chili Oil", "Yuzu Ginger Soy/Sudachi"],
         "", ""]
 ]
 const getAllDishes = () => {
