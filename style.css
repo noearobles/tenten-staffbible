@@ -203,12 +203,12 @@ span::first-letter {
   justify-content: space-between;
 }
 
+.dish:hover .stats {
+  transform: translateY(0);
+}
 
 @media (hover: hover){
 
-  .dish:hover .stats {
-    transform: translateY(0);
-  }
 }
 
 .flex {
