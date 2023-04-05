@@ -106,12 +106,15 @@ main{
   -webkit-overflow-scrolling: scroll;
 }
 body {
-  background-image: url('backgimg.jpg');
+  background: url('backgimg.jpg');
+  background-size: cover;
+  height: 100vh;
   font-size: 20px;
   color: #432818;
   margin: 0, auto;
   padding: 40px;
 }
+
 
 p {
   height: min-content;
