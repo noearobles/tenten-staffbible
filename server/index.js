@@ -9,7 +9,7 @@ function init() {
 }
 init()
 let dishes = [];
-const poke_card = document.getElementById("dishBox")
+const dish_card = document.getElementById("dishBox")
 const generateList = (arg) => {
     let items = "";
     for (let i = 0; i < arg.length; i++) {
@@ -94,6 +94,53 @@ let dishArr = [
         ["Yellowtail Sashimi", "Yuzu Truffle Vinegar", "Black Truffle", "Pink Peppercorn"],
         "", ""]
 ]
+
+// const dishdex = () => {
+//     dishes.forEach((dish) => createDishCard(dish));
+//     console.log(dishes)
+// };
+
+// const getAllPMon = (id) => {
+//     const res = dishArr;
+//     const dish = res;
+//     dishes = [...dishes, dish];
+//     console.log(dishes)
+// };
+// getAllPMon()
+function createDishCard(dish) {
+    const dishEl = document.createElement("div");
+    dishEl.classList.add("dish");
+    // const dishType = dish.type;
+    // const gluten = dish.gluten;
+    // const name = dish.name;
+    // const price = dish.price;
+    // const ingredients = dish.ingredients;
+    const dishType = dish[4];
+    const gluten = dish[5];
+    const name = dish[0];
+    const price = dish[2]
+    const ingredients = dish[3];
+    const dishInnerHTML = `<div class="img-container">
+  <img src="${dish[1]}" 
+  alt = "${name}"/>
+  </div>
+  <div class="info">
+  <h3 class="name">${name}</h3>
+  <small class="type"><span>${dishType}</span></small>
+  </div>
+  <div>
+  <small class="type"><span>Price: $${price}</span></small>
+  </div>
+  <div>
+  <small class="type"><span>${gluten}</span></small>
+  </div>
+  <ol>
+  <small class="stats">Ingredients:<b> ${ingredients}<b></small>
+  </ol>`;
+    dishEl.innerHTML = dishInnerHTML;
+    dish_card.appendChild(dishEl);
+}
+
 function getAllDishes() {
     dishArr.forEach((postArr) => {
         const dishEl = document.createElement("div");
@@ -121,7 +168,26 @@ function getAllDishes() {
     <small class="stats">Ingredients:<b> ${generateList(ingredients)}<b></small>
     </ol>`;
         dishEl.innerHTML = dishInnerHTML;
-        poke_card.appendChild(dishEl);
+        dish_card.appendChild(dishEl);
     })
 }
+
+input.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchTerm = search.value;
+    const searchedPM = searchTerm;
+    if (searchedPM) {
+        console.log(searchedPM);
+        getDish(searchedPM);
+        console.log(dishes);
+        search.value = "";
+    } else if (searchedPM === "") {
+        dishes = [];
+        extractDishes();
+        pokedex();
+    }
+});
 getAllDishes()
+
+
+// dishdex()
