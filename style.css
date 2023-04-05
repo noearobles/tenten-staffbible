@@ -194,9 +194,7 @@ span::first-letter {
 .dish:hover .stats {
   transform: translateY(0);
 }
-.dish:hover:active .stats {
-  transform: translateY(100);
-}
+
 
 .flex {
   display: flex;
@@ -323,7 +321,11 @@ header img {
   animation: opacity 6s ease-in;
 }
 
-@media (min-device-width: 320px) and (max-device-width: 850px) {
+@media (min-device-width: 320px) and (max-device-width: 900px) {
+  .dish:hover .stats {
+    transform: unset;
+  }
+  
   body {
     font-size: 15px;
     padding: 10px;
@@ -354,6 +356,9 @@ header img {
 }
 
 @media (min-device-width: 320px) and (max-device-width: 900px) and (-webkit-min-device-pixel-ratio: 3) {
+  .dish:hover .stats {
+    transform: unset;
+  }
   body {
     font-size: 15px;
   }  
