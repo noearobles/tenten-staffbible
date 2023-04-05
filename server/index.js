@@ -55,7 +55,7 @@ let dishArr = [
     ["Seasonal Vegetable Tempura",
         "dishImages/vegTempura.jpeg",
         14,
-        ["Ginger Kaeshi", "Tempura Fried Carrots", "Egg Plant", "Mushroom", "Squah", "Onion", "Bell Pepper"],
+        ["Ginger Kaeshi", "Tempura Fried Carrots", "Egg Plant", "Mushroom", "Squash", "Onion", "Bell Pepper"],
         "", "Not GF"],
     ["Blistered Shishito Peppers",
         "dishImages/shishitoPeppers.jpeg",
@@ -110,11 +110,11 @@ const extractDish = () => {
     }
     possibleDishes.forEach((possDish) => possDish.remove());
 };
-const getDish = (id) => {
-    const searchDishes = dishes.filter((touch) => console.log(touch[0]) === id);
-    extractDish();
-    searchDishes.forEach((dish) => createDishCard(dish));
-};
+// const getDish = (id) => {
+//     const searchDishes = dishes.filter((touch) => console.log(touch[0]) === id);
+//     extractDish();
+//     searchDishes.forEach((dish) => createDishCard(dish));
+// };
 function createDishCard(arr) {
     arr.map((postArr) => {
         const dishEl = document.createElement("div");

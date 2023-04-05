@@ -18,7 +18,9 @@ tete* {
     url("webfont.svg#svgFontName") format("svg");
   /* Legacy iOS */
 }
-
+main::-webkit-scrollbar {
+  display: none;
+}
 input:focus {
   border: 1px solid #ffe6a7;
   box-shadow: none !important;
@@ -94,7 +96,14 @@ nav {
 .btn1:hover {
   color: #d6c887;
 }
-
+main{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: scroll;
+}
 body {
   background-image: url('backgimg.jpg');
   font-size: 20px;
