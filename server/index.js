@@ -28,7 +28,7 @@ function lowerCaseName(string) {
 class dish {
     constructor(name, sprite, price, ingredients, type, gluten) {
         this.name = name;
-        this.spriteBack = sprite;
+        this.sprite = sprite;
         this.price = price;
         this.ingredients = ingredients;
         this.type = type;
@@ -94,55 +94,29 @@ let dishArr = [
         ["Yellowtail Sashimi", "Yuzu Truffle Vinegar", "Black Truffle", "Pink Peppercorn"],
         "", ""]
 ]
-
-// const dishdex = () => {
-//     dishes.forEach((dish) => createDishCard(dish));
-//     console.log(dishes)
-// };
-
-// const getAllPMon = (id) => {
-//     const res = dishArr;
-//     const dish = res;
-//     dishes = [...dishes, dish];
-//     console.log(dishes)
-// };
-// getAllPMon()
-function createDishCard(dish) {
-    const dishEl = document.createElement("div");
-    dishEl.classList.add("dish");
-    // const dishType = dish.type;
-    // const gluten = dish.gluten;
-    // const name = dish.name;
-    // const price = dish.price;
-    // const ingredients = dish.ingredients;
-    const dishType = dish[4];
-    const gluten = dish[5];
-    const name = dish[0];
-    const price = dish[2]
-    const ingredients = dish[3];
-    const dishInnerHTML = `<div class="img-container">
-  <img src="${dish[1]}" 
-  alt = "${name}"/>
-  </div>
-  <div class="info">
-  <h3 class="name">${name}</h3>
-  <small class="type"><span>${dishType}</span></small>
-  </div>
-  <div>
-  <small class="type"><span>Price: $${price}</span></small>
-  </div>
-  <div>
-  <small class="type"><span>${gluten}</span></small>
-  </div>
-  <ol>
-  <small class="stats">Ingredients:<b> ${ingredients}<b></small>
-  </ol>`;
-    dishEl.innerHTML = dishInnerHTML;
-    dish_card.appendChild(dishEl);
-}
-
-function getAllDishes() {
-    dishArr.forEach((postArr) => {
+const getAllDishes = () => {
+    const res = dishArr;
+    const dish = res;
+    dishes = [...dishes, dish];
+    dishes.forEach((pmon) => createDishCard(pmon));
+    console.log(dishes)
+};
+const extractDish = () => {
+    const dishEls = document.getElementsByClassName("dish");
+    let possibleDishes = [];
+    for (let i = 1; i < dishEls.length; i++) {
+        const dishEl = dishEls[i];
+        possibleDishes = [...possibleDishes, dishEl];
+    }
+    possibleDishes.forEach((possDish) => possDish.remove());
+};
+const getDish = (id) => {
+    const searchDishes = dishes.filter((touch) => console.log(touch[0]) === id);
+    extractDish();
+    searchDishes.forEach((dish) => createDishCard(dish));
+};
+function createDishCard(arr) {
+    arr.map((postArr) => {
         const dishEl = document.createElement("div");
         dishEl.classList.add("dish");
         const dishType = postArr[4];
@@ -164,14 +138,13 @@ function getAllDishes() {
     <div>
     <small class="type"><span>${gluten}</span></small>
     </div>
-    <ol>
+    <ul>
     <small class="stats">Ingredients:<b> ${generateList(ingredients)}<b></small>
-    </ol>`;
+    </ul>`;
         dishEl.innerHTML = dishInnerHTML;
         dish_card.appendChild(dishEl);
     })
 }
-
 input.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchTerm = search.value;
@@ -179,15 +152,11 @@ input.addEventListener("submit", (e) => {
     if (searchedPM) {
         console.log(searchedPM);
         getDish(searchedPM);
-        console.log(dishes);
         search.value = "";
     } else if (searchedPM === "") {
         dishes = [];
-        extractDishes();
-        pokedex();
+        extractDish();
+        getAllDishes();
     }
 });
 getAllDishes()
-
-
-// dishdex()
