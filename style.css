@@ -94,7 +94,8 @@ nav {
 
 .btn:hover,
 .btn1:hover {
-  color: #d6c887;
+  color: #ffe6a7;
+  background-color: #432818;
 }
 main{
   overflow-y: scroll;
@@ -136,7 +137,7 @@ p {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  background-color: #d6c887;
+  background-color: #ffe6a7;
 }
 
 .dish .img-container {
@@ -194,7 +195,7 @@ span::first-letter {
   padding-right: 15%;
   padding-left: 15%;
   background-color: #333333;
-  color: #d6c887;
+  color: #ffe6a7;
   list-style: none;
 }
 
@@ -325,7 +326,7 @@ header img {
   z-index: 99;
   top: 0;
   left: 0;
-  background-color: #d6c887;
+  background-color: #ffe6a7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,9 +334,6 @@ header img {
 }
 
 @media (min-device-width: 320px) and (max-device-width: 900px) {
-  .dish:hover .stats {
-    transform: unset;
-  }
   
   body {
     font-size: 15px;
@@ -367,9 +365,6 @@ header img {
 }
 
 @media (min-device-width: 320px) and (max-device-width: 900px) and (-webkit-min-device-pixel-ratio: 3) {
-  .dish:hover .stats {
-    transform: unset;
-  }
   body {
     font-size: 15px;
   }  
