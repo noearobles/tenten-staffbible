@@ -203,13 +203,17 @@ span::first-letter {
   justify-content: space-between;
 }
 
-.dish:hover .stats {
+.dish:hover .stats,
+.dish:focus .stats,
+.dish:active .stats {
   transform: translateY(0);
 }
 
-@media (hover: hover){
-
-}
+/* @media (hover: hover){
+  .dish:hover .stats{
+    transform: translateY(0);
+  }
+} */
 
 .flex {
   display: flex;
