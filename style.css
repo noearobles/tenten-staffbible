@@ -96,6 +96,7 @@ nav {
 }
 
 body {
+  background-image: url('backgimg.jpg');
   font-size: 20px;
   background-color: #ffe6a7;
   color: #432818;
@@ -126,6 +127,7 @@ p {
   position: relative;
   overflow: hidden;
   margin: 10px;
+  background-color: #d6c887;
 }
 
 .dish .img-container {
