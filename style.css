@@ -5,6 +5,7 @@ tete* {
 
 html {
   margin: 0;
+  background-color: #ffe6a7;
 }
 
 @font-face {
@@ -98,7 +99,6 @@ nav {
 }
 
 body {
-  background-color: #ffe6a7;
   background: url('backgimg.jpg');
   background-size: cover;
   min-height: 100vh;
