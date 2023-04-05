@@ -5,7 +5,7 @@ tete* {
 
 html {
   margin: 0;
-  background: url('backgimg.jpg');
+  background-image: url('backgimg.jpg');
   background-size: cover;
 }
 
@@ -204,17 +204,15 @@ span::first-letter {
   justify-content: space-between;
 }
 
-.dish:hover .stats,
-.dish:focus .stats,
-.dish:active .stats {
+.dish:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+.dish:hover .stats {
   transform: translateY(0);
 }
 
-/* @media (hover: hover){
-  .dish:hover .stats{
-    transform: translateY(0);
-  }
-} */
+
 
 .flex {
   display: flex;

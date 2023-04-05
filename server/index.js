@@ -8,6 +8,7 @@ function init() {
     content.style.display = "none";
 }
 init()
+
 let dishes = [];
 const dish_card = document.getElementById("dishBox")
 const generateList = (arg) => {
