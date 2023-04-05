@@ -3,6 +3,10 @@ tete* {
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+}
+
 @font-face {
   font-family: "Inconsolata";
   src: url("webfont.eot");
@@ -18,9 +22,11 @@ tete* {
     url("webfont.svg#svgFontName") format("svg");
   /* Legacy iOS */
 }
-main::-webkit-scrollbar {
+
+html::-webkit-scrollbar {
   display: none;
 }
+
 input:focus {
   border: 1px solid #ffe6a7;
   box-shadow: none !important;
@@ -63,14 +69,7 @@ nav {
   align-items: baseline;
   color: #d6c887;
 }
-#main {
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+
 .btn1 {
   border-radius: 5px;
 }
@@ -97,22 +96,22 @@ nav {
   color: #ffe6a7;
   background-color: #432818;
 }
-main{
+
+body {
+  background-color: #432818;
+  background: url('backgimg.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 20px;
+  color: #432818;
+  margin: 0, auto;
+  padding: 40px;
   overflow-y: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
   -webkit-overflow-scrolling: scroll;
-}
-body {
-  background: url('backgimg.jpg');
-  background-size: cover;
-  height: 100vh;
-  font-size: 20px;
-  color: #432818;
-  margin: 0, auto;
-  padding: 40px;
 }
 
 
@@ -198,7 +197,6 @@ span::first-letter {
   padding-left: 15%;
   background-color: #333333;
   color: #ffe6a7;
-  list-style: none;
 }
 
 .stats p {
@@ -317,10 +315,12 @@ header img {
   animation: loader 2s infinite ease;
   border-radius: 10px;
 }
+
 #pss {
   font-size: smaller;
   text-align: center;
 }
+
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -336,27 +336,32 @@ header img {
 }
 
 @media (min-device-width: 320px) and (max-device-width: 900px) {
-  
+
   body {
     font-size: 15px;
     padding: 10px;
   }
+
   #dishBox {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
     padding-inline-start: 0;
     grid-gap: 5px;
   }
+
   .dish .number {
     padding: 2.5px 5px;
   }
+
   .search {
     margin: 1rem;
     width: 220px;
   }
+
   #butt {
     font-size: 15px;
   }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -369,7 +374,8 @@ header img {
 @media (min-device-width: 320px) and (max-device-width: 900px) and (-webkit-min-device-pixel-ratio: 3) {
   body {
     font-size: 15px;
-  }  
+  }
+
   #dishBox {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
@@ -380,13 +386,16 @@ header img {
   .dish .number {
     padding: 2.5px 5px;
   }
+
   .search {
     margin: 1rem;
     width: 220px;
   }
+
   #butt {
     font-size: 15px;
   }
+
   footer {
     display: flex;
     flex-direction: column;
