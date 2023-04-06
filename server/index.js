@@ -184,7 +184,7 @@ function createDishCard(arr) {
     <small class="type"><span>${gluten}</span></small>
     </div>
     <ul>
-    <small class="stats">Ingredients:<b> ${ingredients}<b></small>
+    <small class="stats">Ingredients:<b> ${generateList(ingredients)}<b></small>
     </ul>`;
         dishEl.innerHTML = dishInnerHTML;
         dish_card.appendChild(dishEl);
