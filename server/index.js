@@ -143,25 +143,25 @@ const getAllDishes = () => {
     const res = dishArr;
     const dish = res;
     dishes = [...dishes, dish];
-    dishes.forEach((pmon) => createDishCard(pmon));
+    dishes.forEach((dish) => createDishCard(dish));
     console.log(dishes)
 };
 const extractDish = () => {
     const dishEls = document.getElementsByClassName("dish");
     let possibleDishes = [];
-    for (let i = 1; i < dishEls.length; i++) {
+    for (let i = 0; i < dishEls.length; i++) {
         const dishEl = dishEls[i];
         possibleDishes = [...possibleDishes, dishEl];
     }
     possibleDishes.forEach((possDish) => possDish.remove());
 };
 // const getDish = (id) => {
-//     const searchDishes = dishes.filter((touch) => console.log(touch[0]) === id);
-//     extractDish();
+//     const searchDishes = dishes.filter((touch) => touch.name === id);
+//     extractDish()
 //     searchDishes.forEach((dish) => createDishCard(dish));
 // };
 function createDishCard(arr) {
-    arr.map((postArr) => {
+    arr.forEach((postArr) => {
         const dishEl = document.createElement("div");
         dishEl.classList.add("dish");
         const dishType = postArr[4];
@@ -184,7 +184,7 @@ function createDishCard(arr) {
     <small class="type"><span>${gluten}</span></small>
     </div>
     <ul>
-    <small class="stats">Ingredients:<b> ${generateList(ingredients)}<b></small>
+    <small class="stats">Ingredients:<b> ${ingredients}<b></small>
     </ul>`;
         dishEl.innerHTML = dishInnerHTML;
         dish_card.appendChild(dishEl);
@@ -193,12 +193,11 @@ function createDishCard(arr) {
 input.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchTerm = search.value;
-    const searchedPM = searchTerm;
-    if (searchedPM) {
-        console.log(searchedPM);
-        getDish(searchedPM);
+    const searchedDish = searchTerm;
+    if (searchedDish) {
+        getDish(searchedDish);
         search.value = "";
-    } else if (searchedPM === "") {
+    } else if (searchedDish === "") {
         dishes = [];
         extractDish();
         getAllDishes();
